@@ -51,6 +51,7 @@ export default function Home() {
             if (index === 6) rotate = 60;
             return (
               <motion.div
+                key={index}
                 className="absolute w-36 h-36 border border-white shadow-lg overflow-hidden flex items-center justify-center"
                 style={{ borderRadius: 12 }}
                 onClick={() => {
@@ -155,12 +156,12 @@ export default function Home() {
           />
         ) : null}
       </AnimatePresence>
-      {/* <CopyRight /> */}
+      <CopyRight />
     </main>
   );
 }
 
-export const CopyRight = () => {
+function CopyRight() {
   return (
     <div className="absolute bottom-0 left-0 right-0 flex items-center gap-4 p-4 border-t bg-white z-20">
       <a href="https://lndev.me" className="underline underline-offset-2">
@@ -174,7 +175,7 @@ export const CopyRight = () => {
       </a>
     </div>
   );
-};
+}
 
 const PHOTOS = [
   {
